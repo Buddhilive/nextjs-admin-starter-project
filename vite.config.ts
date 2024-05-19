@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import sass from 'sass';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,7 +10,17 @@ export default defineConfig({
             formats: ['es']
         },
         rollupOptions: {
-            external: /^lit/
+            external: /^lit/,
+            input: [
+                'src/scss/styles.scss'
+            ]
+        }
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                implementation: sass,
+            }
         }
     }
 });
