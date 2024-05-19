@@ -1,12 +1,12 @@
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-@customElement('solias-core')
-export class SoliasCore extends LitElement {
+@customElement('solias-core-design')
+export class SoliasCoreDesign extends LitElement {
   
   render() {
     return html`
-      <p>Hello World!</p>
+      <p>Design</p>
     `
   }
 
@@ -14,6 +14,6 @@ export class SoliasCore extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'solias-core': SoliasCore
+    'solias-core-design': SoliasCoreDesign
   }
 }
