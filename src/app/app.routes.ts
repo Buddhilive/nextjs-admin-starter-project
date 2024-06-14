@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { IndexContainerComponent } from './public/index-container/index-container.component';
-import { AuthDashboardComponent } from './auth/auth-dashboard/auth-dashboard.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+
 
 export const routes: Routes = [
     {
@@ -9,6 +10,6 @@ export const routes: Routes = [
     },
     {
         path: 'portal',
-        component: AuthDashboardComponent
+        component: AdminDashboardComponent
     }
 ];
