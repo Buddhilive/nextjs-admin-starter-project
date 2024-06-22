@@ -104,7 +104,7 @@ export class AuthService {
       .then((result: any) => {
         this.ngZone.run(() => {
           setTimeout(() => {
-            this.router.navigate(['dashboard'])
+            this.router.navigate(['portal'])
           }, 100);
           // window.location.href = 'dashboard';
         });
