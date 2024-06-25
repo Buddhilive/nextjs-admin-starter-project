@@ -1,6 +1,26 @@
 <div class="solias-signup">
-    <input type="text" name="" id="">
-    <input type="text" name="" id="">
-    <input type="text" name="" id="">
-    <button>Signup</button>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <input
+      type="email"
+      formControlName="email"
+      id="email"
+      placeholder="Email"
+    />
+    <input
+      type="password"
+      formControlName="password"
+      id="password"
+      placeholder="Password"
+    />
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      id="confirmPassword"
+      placeholder="Confirm password"
+    />
+    @if (signUpForm.errors?.['mismatch'] && signUpForm.get('confirmPassword')?.touched) {
+    <p>Passwords don't match</p>
+    }
+    <button type="submit">Signup</button>
+  </form>
 </div>
