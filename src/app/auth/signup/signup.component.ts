@@ -42,8 +42,15 @@ export class SignupComponent {
   }
 
   onSubmit() {
-    // Submit form data to your backend service here
-    console.log(this.signUpForm?.value);
+    console.log(this.signUpForm);
+
+    if(this.signUpForm?.valid) {
+      const email = this.signUpForm?.value?.email ? this.signUpForm?.value?.email : '';
+      const password = this.signUpForm?.value?.password ? this.signUpForm?.value?.password : '';
+      if (email !== '' && password !== '') {
+        this._authService.SignUp(email, password);
+      }
+    }
   }
 
 
