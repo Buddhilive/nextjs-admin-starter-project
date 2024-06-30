@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'solias-forgot-password',
@@ -9,6 +10,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './forgot-password.component.scss'
 })
 export class ForgotPasswordComponent {
+  private _authService = inject(AuthService);
+
   resetPassForm = new FormGroup(
     {
       email: new FormControl('',
@@ -21,5 +24,12 @@ export class ForgotPasswordComponent {
 
   onSubmit() {
     console.log(this.resetPassForm);
+    if (this.resetPassForm?.valid) {
+      const email = this.resetPassForm?.value?.email ? this.resetPassForm?.value?.email : '';
+
+      if (email !== '') {
+        this._authService.forgotPassword(email);
+      }
+    }
   }
 }

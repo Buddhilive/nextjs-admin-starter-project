@@ -72,7 +72,7 @@ export class AuthService {
   }
 
   // Reset Forggot password
-  ForgotPassword(passwordResetEmail: string) {
+  forgotPassword(passwordResetEmail: string) {
     return sendPasswordResetEmail(this.afAuth, passwordResetEmail)
       .then(() => {
         window.alert('Password reset email sent, check your inbox.');
