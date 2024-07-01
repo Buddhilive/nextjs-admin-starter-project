@@ -6,6 +6,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ErrorPageComponent } from './public/error-page/error-page.component';
 import { authGuard } from './auth/auth-guard.guard';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './auth/verify-email/verify-email.component';
 
 
 export const routes: Routes = [
@@ -29,6 +30,10 @@ export const routes: Routes = [
     {
         path: 'reset-password',
         component: ForgotPasswordComponent
+    },
+    {
+        path: 'verify-email-address',
+        component: VerifyEmailComponent
     },
     {
         path: '**',
