@@ -50,7 +50,7 @@ export class AuthService {
       .then((result: any) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
-        this.SendVerificationMail();
+        this.sendVerificationMail();
         this.SetUserData(result.user);
       })
       .catch((error: Error) => {
@@ -59,13 +59,14 @@ export class AuthService {
   }
 
   // Send email verfificaiton when new user sign up
-  SendVerificationMail() {
+  sendVerificationMail() {
     const currentUser = this.afAuth.currentUser;
     if (currentUser) {
       sendEmailVerification(currentUser)
         .then(() => {
           this.router.navigate(['verify-email-address']);
-        });
+        })
+        .catch((err) => console.error(err));
     } else {
       alert('User not found!');
     }
