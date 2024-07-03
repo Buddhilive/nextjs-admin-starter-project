@@ -35,7 +35,7 @@ export class AuthService {
         this.SetUserData(result.user);
         this.authState.subscribe((user: any) => {
           if (user) {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['portal']);
           }
         });
       })

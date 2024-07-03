@@ -1,3 +1,19 @@
-<button mat-flat-button color="primary" (click)="login()">
-  Login with Google
-</button>
+<div class="ngcms-login">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input
+      type="email"
+      formControlName="email"
+      id="email"
+      placeholder="Email"
+    />
+    <input
+      type="password"
+      formControlName="password"
+      id="password"
+      placeholder="Password"
+    />
+    <button mat-flat-button color="primary" type="submit">
+      Login with Google
+    </button>
+  </form>
+</div>
