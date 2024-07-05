@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './public/error-page/error-page.component';
 import { authGuard } from './auth/auth-guard.guard';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './auth/verify-email/verify-email.component';
+import { AccountDetailsComponent } from './admin/account-details/account-details.component';
 
 
 export const routes: Routes = [
@@ -34,6 +35,10 @@ export const routes: Routes = [
     {
         path: 'verify-email-address',
         component: VerifyEmailComponent
+    },
+    {
+        path: 'profile',
+        component: AccountDetailsComponent
     },
     {
         path: '**',
