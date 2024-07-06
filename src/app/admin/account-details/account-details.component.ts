@@ -21,6 +21,6 @@ export class AccountDetailsComponent implements OnInit {
 
   async loadUserInfo() {
     this.userInfo = await this._authService.getUserInfo();
-    // console.log(this.userInfo)
+    console.log(this.userInfo)
   }
 }
