@@ -8,7 +8,7 @@ export const SIDEBAR_DATA = {
     },
     teams: [
         {
-            name: "Buddhilive Inc",
+            name: "Buddhilive Inc.",
             logo: GalleryVerticalEndIcon,
             plan: "Enterprise",
         },
@@ -18,7 +18,7 @@ export const SIDEBAR_DATA = {
             plan: "Startup",
         },
         {
-            name: "Evil Corp.",
+            name: "Buddhilive Group.",
             logo: TerminalIcon,
             plan: "Free",
         },
