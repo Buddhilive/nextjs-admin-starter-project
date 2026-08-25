@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { ModeToggle } from "@/components/custom/toggle-mode";
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -19,7 +20,7 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
         <SidebarProvider>
             <AppSidebar />
             <SidebarInset>
-                <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+                <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
                     <div className="flex items-center gap-2 px-4">
                         <SidebarTrigger className="-ml-1" />
                         <Separator
@@ -39,6 +40,9 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
                                 </BreadcrumbItem>
                             </BreadcrumbList>
                         </Breadcrumb>
+                    </div>
+                    <div className="flex items-center gap-2 px-4">
+                        <ModeToggle />
                     </div>
                 </header>
                 {children}

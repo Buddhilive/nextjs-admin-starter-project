@@ -8,12 +8,12 @@ export const SIDEBAR_DATA = {
     },
     teams: [
         {
-            name: "Acme Inc",
+            name: "Buddhilive Inc",
             logo: GalleryVerticalEndIcon,
             plan: "Enterprise",
         },
         {
-            name: "Acme Corp.",
+            name: "Buddhilive Corp.",
             logo: AudioLinesIcon,
             plan: "Startup",
         },
