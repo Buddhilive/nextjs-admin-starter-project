@@ -13,7 +13,7 @@ export default function LoginPage() {
             <div className="flex size-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <GalleryVerticalEndIcon className="size-4" />
             </div>
-            Acme Inc.
+            Buddhilive Inc.
           </a>
         </div>
         <div className="flex flex-1 items-center justify-center">
@@ -27,6 +27,8 @@ export default function LoginPage() {
           src="/images/login-screen-bg.jpg"
           alt="Image"
           fill
+          loading="eager"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />
       </div>
